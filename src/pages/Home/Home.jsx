@@ -69,16 +69,19 @@ export const Home = () => {
 
     return(
         <>
-            <PeliculasContext.Provider value={{imagenBtnHandler }}>
+            <PeliculasContext.Provider value={{imagenBtnHandler , resultado , peliculas} }>
                 
                 <Header />
 
                 <main className="Home-main">
                     <section className="Home">
+
                         <h2 className="Home-h2">Movie List</h2>
+
                         <div className="Home-browser">
                             <input value={buscar} onChange={buscador}  type="text" name="Search" id="Search" placeholder='Search' className='Home-search' />
                         </div>
+
                         <div className="Home-wrapper">
                             <ul className="Home-ul"></ul>
                             {peliculas.length === 0 && <span>No hay peliculas</span>}
@@ -87,6 +90,7 @@ export const Home = () => {
                             <Lista key={pelicula._id} {...pelicula} />
                         )}
                         </div>
+
                     </section>
                     <Footer />
                 </main>

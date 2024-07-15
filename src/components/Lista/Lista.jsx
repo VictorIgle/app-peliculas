@@ -7,7 +7,7 @@ export const ListaPeliculas = (props) => {
 
     const {_id , director , genre , synopsis , title , year , trailer } = props
 
-    const { deletePelicula , putPeliculaBtn , toggleClass , isActive } = useContext(PeliculasContext)
+    const { deletePelicula , putPeliculaBtn , toggleClass } = useContext(PeliculasContext)
 
 
 

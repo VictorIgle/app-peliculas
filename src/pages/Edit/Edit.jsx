@@ -12,26 +12,34 @@ import {Footer} from '../../components/Footer/Footer'
 export const Edit = () => {
 
     //Importamos el archivo de entorno para la url.
-
     const {VITE_ED} = import.meta.env
-    
 
-    //Definimos useState pare guardar los datos
-
+    //Definimos useState pare guardar los datos de las peliculas
     const [ peliculas , setPeliculas] = useState([])
-    //Definimos un state para el cambio de clases para mostrar y ocultar al hacer click en "update"
+
+    //Definimos un state para el cambio de clases para mostrar y ocultar al hacer click en "update" con cambio de clases
     const [ isActive , setIsactive ] = useState("")
     const toggleClass = (value) => setIsactive(value)
+
     //Definimos navigate con el hook useNavigate para poder navegar entre paginas
     const navigate = useNavigate()
 
-    //Definimos las referencias para los formularios.
+    //State para guardar los datos de la barra del buscador 
+    const [buscar , setBuscar ] = useState("")
 
+    //Metodo de busqueda para el input Search. Con el capturamos los valores escritos
+    const buscador = (e) => {
+        setBuscar(e.target.value)
+     }
+
+     //Metodo de filtrado. Si no se escribe nada, muestra los datos originales de peliculas y si se introduce un valore, se pasa a minusculas para no ser sensible a las mayusculas y se muestran los datos en base a la propiedad title
+    const resultado = !buscar ? peliculas : peliculas.filter((datos) =>
+         datos.title.toLowerCase().includes(buscar.toLocaleLowerCase()) )
+
+    //Definimos las referencias para los formularios.
     const formularioPut = useRef()
 
     //Definimos las funciones, para recibir los datos en el fetch , poder modificar, eliminar y añadir mediante formularios.
-    //Tambien incluimos form['el name que sea'].value="" con el valor vacio para que al ejecutar el submit, los campos vuelvan a estar vacios en el formulario
-
     const pedirDatos = async () => {
         
         let controler = new AbortController
@@ -48,9 +56,9 @@ export const Edit = () => {
     }
     //Funcion que eliminara la pelicula de la base de datos buscando su id 
     const deletePelicula = async (_id) => {
-       
+        
         let controler = new AbortController
-
+        
         let options = {
             method : 'delete',
             signal : controler.signal
@@ -78,6 +86,7 @@ export const Edit = () => {
         form['trailer'].value = buscar.trailer
     }
     //Funcion que actualizara los datos del formulario al hacer submit
+    //Tambien incluimos form['el name que sea'].value="" con el valor vacio para que al ejecutar el submit, los campos vuelvan a estar vacios en el formulario
     const putPelicula = async (e) => {
         e.preventDefault()
         
@@ -115,15 +124,14 @@ export const Edit = () => {
         .catch( err => console.log(err.message) )
         .finally( ()=> controler.abort() )
     }
+    
     //Funcion para navegar hasta otra pagina desde un boton
     const homeBtnHandler = () => {
         navigate('/home')
     }
 
 
-
     //Utilizamos el Effect para ejecutar el código cuando se renderiza el componente y  si login no es "true" navegara de vuelta al "login"
-
     useEffect(() => {
 
         
@@ -145,11 +153,16 @@ export const Edit = () => {
 
                 <section className="Edit-section">
 
+                    
+                    <div className="Home-browser">
+                        <input value={buscar} onChange={buscador} type="text" name="Search" id="Search" placeholder='Search' className='Home-search' />
+                    </div>
+                    
                     <h2 className="Edit-list">Movie List</h2>
                     
                     <ul className="Edit-ul">
                         {peliculas.length === 0 && <li className="Edit-li">Not movies</li>}
-                        {peliculas.length != 0 && peliculas.map( pelicula =>
+                        {resultado.length != 0 && resultado.map( pelicula =>
 
                         <ListaPeliculas  key={pelicula._id} {...pelicula} />
                         
