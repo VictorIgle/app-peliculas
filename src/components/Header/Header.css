@@ -68,3 +68,10 @@
         width: 1.5rem;
     }
 }
+
+@media(max-width: 230px){
+
+    .Header-ul{
+        gap: 1rem;
+    }
+}
