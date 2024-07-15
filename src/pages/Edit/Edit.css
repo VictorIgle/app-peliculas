@@ -10,11 +10,20 @@ h2{
     padding: 0 0 10px;
 }
 
+.Edit-search{
+    width: 40%;
+    margin: 0 auto 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--color-placeholder);
+    color: var(--color-primary);
+}
+
 .Edit-h2{
     margin: 0 0 1rem;
 }
 
-.Edit-section {
+.Edit-section{
     max-width: 37.5rem;
     display: flex;
     flex-flow: column;

@@ -155,7 +155,7 @@ export const Edit = () => {
 
                     
                     <div className="Home-browser">
-                        <input value={buscar} onChange={buscador} type="text" name="Search" id="Search" placeholder='Search' className='Home-search' />
+                        <input value={buscar} onChange={buscador} type="text" name="Search" id="Search" placeholder='Search' className='Edit-search' />
                     </div>
                     
                     <h2 className="Edit-list">Movie List</h2>

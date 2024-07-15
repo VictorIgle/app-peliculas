@@ -33,6 +33,10 @@
     margin: 15px 0;
     border-bottom: 2px solid var(--color-placeholder);
 }
+
+.Edit-span--trailer{
+    border-bottom: 2px solid var(--color-placeholder);
+}
 /*Overflow-wrap añadido para que si el texto del enlace no cabe en la contenedora este baje en lugar de seguir en linea*/
 .Edit-span--trailer{
     overflow-wrap: break-word;
@@ -40,6 +44,7 @@
 
 .Edit-p{
     margin: 10px 0;
+    border-bottom: 2px solid var(--color-placeholder);
 }
 .Edit-btncontain{
     width: 12rem;
