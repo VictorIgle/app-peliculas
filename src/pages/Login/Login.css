@@ -1,0 +1,66 @@
+/*Seccion del login para tener una forma lo mas cuadrada posible y con lso elementos dispuestos en forma de columna*/
+.Login{
+    padding: 1.25rem;
+    max-width: 25rem;
+    margin:10rem auto;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.Login-h2{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.Login-form{
+    margin: 1.25rem 0;
+}
+
+.Login-user{
+    margin: 1.25rem 0;
+}
+
+.Login-input{
+    width: calc(100% - 22px);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--color-placeholder);
+    color: var(--color-primary);
+}
+
+.Login-input::placeholder{
+    color: var(--color-inputtext);
+}
+
+.Login-submit {
+    width: 100%;
+    background-color:var(--color-secondary);
+    border-radius: 5px;
+    color: var(--color-primary);
+    padding: 10px;
+    margin: 2rem 0 0 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.Login-submit:hover {
+    background-color: var(--color-hover);
+}
+
+.Loggin-message{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 2.1875rem;
+}
+
+.Loggin-span{
+    font-size: 2rem;
+    text-align: center;
+    color: var(--color-secondary); 
+}

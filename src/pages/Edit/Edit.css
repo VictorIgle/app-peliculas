@@ -1,0 +1,106 @@
+
+/*Seccion donde se dara forma a la contenedora de la una lista en columna con la informacion de cada pelicula y un cambio de clases para el formulario,
+ para que aparezca siempre en el medio de la pantalla del usuario y asi facilitar la experiencia del mismo, sin tener que bajar hasta el final de la lista 
+ donde originalmente estaba el input*/
+
+/*Propiedades por defecto para todos los h2*/
+h2{
+    color: var(--color-secondary);
+    border-bottom: 2px solid var(--color-secondary);
+    padding: 0 0 10px;
+}
+
+.Edit-h2{
+    margin: 0 0 1rem;
+}
+
+.Edit-section {
+    max-width: 37.5rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 1.25rem;
+    margin: auto;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.Edit-li{
+    background-color: #333;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.Edit-li:hover {
+    background-color: #444;
+}
+
+.Edit-form{
+    margin: 1.25rem 0;
+}
+
+.Edit-input{
+    width: calc(100% - 22px);
+    background-color: var(--color-placeholder);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: var(--color-primary);
+}
+
+.Edit-input::placeholder{
+    color: #bbb;
+}
+
+.Edit-input.submit{
+    background-color: var(--color-secondary);
+    cursor: pointer;
+    transition: background-color 0.5s;
+    transition: transform ease-in .2s;
+}
+
+.Edit-input.submit:hover{
+    background-color: var(--color-hover);
+}
+
+.Edit-input.submit:active{
+    transform: scale(.9);
+}
+
+.Edit-input--synopsis{
+    width: calc(100% - 22px);
+    min-height: 6.25rem;
+    background-color: var(--color-placeholder);
+    border-radius: 5px;
+    color: #e5e5e5;
+    padding: 0 10px 0;
+    margin: 10px 0;
+}
+
+.Edit-input--synopsis::placeholder{
+    color: var(--color-inputtext);
+}
+/*Display none para que por defecto no sea visible el formulario,
+ el position fixed para ajustar que aparezca en el centro de la pantalla y se mantenga fijado en ella*/
+.Edit-form{
+    display:none;
+    padding: 20px;
+    background-color: rgb(36, 34, 34);
+    border: 2px solid var(--color-placeholder);
+    border-radius: 8px;
+
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 57%;
+    left: 50%;
+
+}
+/*Display block cuando la clase sea isActive para que aparezca el formulario*/
+.Edit-form.isActive{
+    display: block;
+    width: 40%;
+    min-width: 12.5rem;
+}

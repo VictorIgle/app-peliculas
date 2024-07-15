@@ -1,0 +1,70 @@
+.Add-section{
+    max-width: 37.5rem;
+    background-color: #222;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    padding: 1.25rem;
+    margin:16rem auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.Add-h2{
+    margin: 0 0 1rem;
+}
+
+.Add-input{
+    width: calc(100% - 22px);
+    background-color: var(--color-placeholder);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: var(--color-primary);
+}
+
+.Add-input::placeholder{
+    color: var(--color-inputtext);
+}
+
+.Add-submit{
+    background-color: var(--color-secondary);
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.Add-submit:hover{
+    background-color: var(--color-hover);
+}
+
+.Add-input--synopsis{
+    width: calc(100% - 22px);
+    height: 100px;
+    background-color: var(--color-placeholder);
+    border-radius: 5px;
+    color: var(--color-primary);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.Add-input--synopsis::placeholder{
+    color: var(--color-inputtext);
+}
+
+.Add-input.submit{
+    background-color: var(--color-secondary);
+    cursor: pointer;
+    transition: background-color 0.5s;
+    transition: transform  ease-in .5s ;
+}
+
+.Add-input.submit:hover{
+    background-color: var(--color-hover);
+}
+
+.Add-input.submit:active{
+    transform: scale(.9);
+}

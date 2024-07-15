@@ -1,0 +1,81 @@
+.Edit-section{
+    max-width: 37.5rem;
+    background-color: #222;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 1.25rem;
+    margin: 15rem auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    position: relative;
+}
+
+.Edit-li{
+    background-color: #333;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.Edit-li:hover{
+    background-color: var(--color-placeholder)
+}
+
+.Edit-h3{
+    font-size: 1.5em;
+    color: var(--color-secondary);
+}
+
+.Edit-span{
+    margin: 15px 0;
+    border-bottom: 2px solid var(--color-placeholder);
+}
+/*Overflow-wrap añadido para que si el texto del enlace no cabe en la contenedora este baje en lugar de seguir en linea*/
+.Edit-span--trailer{
+    overflow-wrap: break-word;
+}
+
+.Edit-p{
+    margin: 10px 0;
+}
+.Edit-btncontain{
+    width: 12rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 3px solid var(--color-placeholder);
+    border-radius: 10px;
+    padding: 0.5rem;
+    gap: 1.5rem;
+    margin: 2rem 0 0;
+
+}
+.Edit-btn{
+    background-color: var(--color-secondary);
+    border-radius: 5px;
+    padding: 10px;
+    margin:10px 0 10px;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: background-color .5s;
+    transition: transform ease-in .2s;
+}
+
+.Edit-btn:hover{
+    background-color: var(--color-hover);
+}
+
+.Edit-btn:active{
+    transform: scale(.9);
+}
+
+@media(max-width:250px){
+    .Edit-btncontain{
+        flex-direction: column;
+        border: none;
+    }
+}

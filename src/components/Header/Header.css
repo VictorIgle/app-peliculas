@@ -1,0 +1,70 @@
+/*Estilo del header con forma de reactangulo que ocupe siempre el 100% de ancho
+ y con los elementos interactivos debajo para facilitar el responsive*/
+.Header{
+    width: 100%;
+    background-color: rgb(12, 11, 11);
+    backdrop-filter: 50px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    -webkit-box-shadow: 0px 18px 24px 0px rgba(6, 6, 8, 1);
+    -moz-box-shadow: 0px 18px 24px 0px rgba(6, 6, 8, 1);
+    box-shadow: 0px 18px 15px 0px rgba(6, 6, 8, 1);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: .95;
+}
+.Header-h1{
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0 0 2rem 1rem;
+    color: var(--color-secondary);
+    text-shadow: 11px 7px 11px rgb(3, 3, 3);
+}
+.Header-nav{
+    width: 100%;
+    margin: 0 2rem 0 1rem;
+}
+.Header-ul{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:center;
+    align-items: center;
+    gap: 5rem;
+    
+}
+
+.Header-btn{
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+}
+.Header-icon{
+    width: 2rem;
+     
+}
+.Header-btn:hover{
+    transform: scale(1.1);
+    transform: translateY(-10px);
+}
+.Header-btn:active{
+    transform: scale(.9);
+}
+
+@media(max-width: 410px){
+    .Header-ul{
+        gap: 2rem;
+    }
+    .Header-h1{
+        font-size: 2rem;
+    }
+    .Header-icon{
+        width: 1.5rem;
+    }
+}
