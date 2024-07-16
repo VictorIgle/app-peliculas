@@ -8,7 +8,7 @@ import { Edit } from './pages/Edit/Edit'
 import { Movie } from './pages/Movie/Movie'
 import { Add } from './pages/Add/Add'
 
-
+//Definimos en Routes en las rutas "Route" mediante el path asociado a cada pagina y element para asociarlo al componente/page correspondiente 
 function App() {
  
 

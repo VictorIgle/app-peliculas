@@ -30,6 +30,7 @@ export const Movie = () => {
     //Usefect para ejecutar el codigo y si login no es "true" navegara de vuelta al "login"
     useEffect(() => {
 
+        window.scrollTo(0, 0)
         
         let login = JSON.parse(localStorage.getItem('username'))
 
