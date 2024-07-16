@@ -3,7 +3,6 @@
 .Header{
     width: 100%;
     background-color: rgb(12, 11, 11);
-    backdrop-filter: 50px;
     display: flex;
     flex-flow: column;
     justify-content: center;
