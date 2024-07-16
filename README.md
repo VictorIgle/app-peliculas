@@ -1,6 +1,7 @@
 # app-peliculas-proyecto-final
  Proyecto final de fullstack. Aplicacion de peliculas
 ![image](https://github.com/user-attachments/assets/6bc9dfc2-5164-49a5-98cd-d720a264ba5b)
+![image](https://github.com/user-attachments/assets/124a409e-d7fb-4d30-b11f-a4926078742a)
 ![image](https://github.com/user-attachments/assets/ca992391-9b0a-4b7c-994c-63a2aeb8a884)
 ![image](https://github.com/user-attachments/assets/8c32217f-331a-4837-8327-a88602290eb9)
 ![image](https://github.com/user-attachments/assets/6dc8762e-a184-4602-81a8-2d296b825b81)
