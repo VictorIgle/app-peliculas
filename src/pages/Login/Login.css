@@ -42,11 +42,15 @@
     margin: 2rem 0 0 0;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.5s;
+    transition: all 0.5s ease-in;
 }
 
 .Login-submit:hover {
     background-color: var(--color-hover);
+}
+
+.Login-submit:active{
+    transform: scale(.9);
 }
 
 .Loggin-message{

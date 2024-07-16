@@ -11,8 +11,7 @@ export const Login = () => {
     //States para recibir la informacion del login y la respuesta del error si lo que se reciben no son los datos correctos
     const [ login , setLogin ] = useState(null)
     //Estado para gestionar el mensaje de error si el login es false
-    const [ error, setError ] = useState(false)
-
+    const [error, setError] = useState(null);
     //Importada variable de entorno
     const {VITE_API} = import.meta.env
 
@@ -58,14 +57,14 @@ export const Login = () => {
         .then( data =>  {
             if(data.login){
                 setLogin(data.login) 
-                localStorage.setItem('username' , JSON.stringify({login : true}))
+                localStorage.setItem('username' , JSON.stringify({login : true}))//Si el estado de login es true, setError es nulo. Si no cambia el estate a "Failed to login"
+                setError(null)
             }else{
-                setLogin(true)
-                setError(true)
+                setError('Failed to login')
             }
         })
             
-        .catch( err => console.log(err.message), setError(true) )
+        .catch( err => console.log(err.message) )
         .finally( ()=> controler.abort() )
     }
 
