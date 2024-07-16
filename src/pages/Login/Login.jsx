@@ -10,7 +10,8 @@ export const Login = () => {
     const navigate = useNavigate()
     //States para recibir la informacion del login y la respuesta del error si lo que se reciben no son los datos correctos
     const [ login , setLogin ] = useState(null)
-    const [ error , setError ] = useState(false)
+    //Estado para gestionar el mensaje de error si el login es false
+    const [ error, setError ] = useState(false)
 
     //Importada variable de entorno
     const {VITE_API} = import.meta.env
@@ -56,8 +57,11 @@ export const Login = () => {
         .then( res => res.json() )
         .then( data =>  {
             if(data.login){
-                setLogin(data.login), setError(!data.login) 
+                setLogin(data.login) 
                 localStorage.setItem('username' , JSON.stringify({login : true}))
+            }else{
+                setLogin(true)
+                setError(true)
             }
         })
             
@@ -90,7 +94,6 @@ export const Login = () => {
                 </form>
 
                 { error && <ErrorLogin/> }
-
             </section> 
 
             
