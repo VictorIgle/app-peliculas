@@ -53,7 +53,7 @@ export const Movie = () => {
                 <div className="Movie-wrapper">
                     {pelicula === 0 && <span>Not info</span>}
                     <h3 className="Movie-h3">{title}</h3>
-                    <img src={poster || '../assets/posters/poster-notimage.png'} alt={title} className='Movie-img' />
+                    <img src={poster || '../assets/posters/poster-notimage.png'} width={500} height={740} alt={title} className='Movie-img' />
                     <span className="Movie-span">Direction: {director} </span>
                     <span className="Movie-span">Year: {year} </span>
                     <span className="Movie-span">Genre: {genre} </span>
