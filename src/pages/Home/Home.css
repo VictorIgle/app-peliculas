@@ -71,6 +71,14 @@
     border: 10px solid rgb(0, 128, 0) ;
 }
 
+.Home-h3{
+    color: var(--color-secondary);
+    text-align: center;
+    border-bottom: solid;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
 /*Correccion para que en resolucion de menos de 370px la sombra que hace de caja desaparezca*/
 @media(max-width: 370px){
     .Home-wrapper{
