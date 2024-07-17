@@ -72,7 +72,10 @@
 }
 
 .Home-h3{
-    color: var(--color-secondary);
+
+    color: #F63236;
+    font-size: 1.5rem;
+    font-weight: bold;
     text-align: center;
     border-bottom: solid;
     padding: 1rem;
