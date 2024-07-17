@@ -109,7 +109,7 @@ const Lista = (props) => {
 
     return(
         <li className="Home-li">
-            <img src={image || './assets/images/notimage.png' } alt={title} title={title} onClick={ () => imagenBtnHandler(_id)} loading='lazy' className="Home-img" />
+            <img src={image || './assets/images/notimage.png' } width={250} height={370} alt={title} title={title} onClick={ () => imagenBtnHandler(_id)} loading='lazy' className="Home-img" />
         </li>
 
     )
