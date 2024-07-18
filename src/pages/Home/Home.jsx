@@ -84,7 +84,7 @@ export const Home = () => {
 
                         <div className="Home-wrapper">
                             <ul className="Home-ul"></ul>
-                            {peliculas.length === 0 && <span>No hay peliculas</span>}
+                            {peliculas.length === 0 && <span>Loading movies</span>}
                             {resultado.length != 0 && resultado.map( pelicula =>
                             
                             <Lista key={pelicula._id} {...pelicula} />
