@@ -161,7 +161,7 @@ export const Edit = () => {
                     <h2 className="Edit-list">Movie List</h2>
                     
                     <ul className="Edit-ul">
-                        {peliculas.length === 0 && <li className="Edit-li">Not movies</li>}
+                        {peliculas.length === 0 && <li className="Edit-li">Loading list</li>}
                         {resultado.length != 0 && resultado.map( pelicula =>
 
                         <ListaPeliculas  key={pelicula._id} {...pelicula} />
