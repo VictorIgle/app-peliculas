@@ -134,7 +134,6 @@ export const Edit = () => {
     //Utilizamos el Effect para ejecutar el código cuando se renderiza el componente y  si login no es "true" navegara de vuelta al "login"
     useEffect(() => {
 
-        
         let login = JSON.parse(localStorage.getItem('username'))
 
         if(!login) {

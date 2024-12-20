@@ -42,7 +42,7 @@ export const Movie = () => {
 
     } , [_id])
 
-    const { title , director , genre , synopsis , poster , year , trailer } =pelicula
+    const { title , director , genre , synopsis , poster , year , trailer } = pelicula
 
     return(
         <>  

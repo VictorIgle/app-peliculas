@@ -77,6 +77,7 @@ export const Add = () => {
     //UseEffect para ejecutar el codigo y renderizar el componente y si login no es "true" navegara de vuelta a "login"
     useEffect(() => {
 
+        window.scrollTo(0, 0)
         
         let login = JSON.parse(localStorage.getItem('username'))
 
