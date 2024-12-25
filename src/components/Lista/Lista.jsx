@@ -23,7 +23,7 @@ export const ListaPeliculas = (props) => {
             
             <div className="Edit-btncontain">
             <button onClick={ () => deletePelicula(_id)} className="Edit-btn">Delete</button>
-            <button onClick={() => { putPeliculaBtn(_id); toggleClass("Active") }} className="Edit-btn">Update</button>
+            <button onClick={() => { putPeliculaBtn(_id); toggleClass("open") }} className="Edit-btn">Update</button>
             </div>
             
 
